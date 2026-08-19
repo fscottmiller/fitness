@@ -44,6 +44,12 @@ def app() -> Iterator[FastAPI]:
 
 
 @pytest.fixture
+def token() -> str:
+    """The bearer token the test app is configured with."""
+    return TEST_TOKEN
+
+
+@pytest.fixture
 def client(app: FastAPI) -> TestClient:
     """Client with no credentials attached."""
     return TestClient(app)
