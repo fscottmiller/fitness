@@ -26,6 +26,8 @@ uv run uvicorn app.main:app --reload
 
 - `GET /health` — open, returns `{"status":"ok"}`
 - `GET /api/*` — requires `Authorization: Bearer $PRENGINE_TOKEN`
+- `/mcp` — MCP server (FastMCP 2.x, streamable HTTP), same bearer token. No
+  tools are registered yet
 
 ## Tests
 
